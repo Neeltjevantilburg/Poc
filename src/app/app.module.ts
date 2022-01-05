@@ -10,13 +10,15 @@ import { DialogComponent } from './dialog/dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoginUpdateComponent } from './login-update/login-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    DialogComponent
+    DialogComponent,
+    LoginUpdateComponent
   ],
   imports: [
     BrowserModule,

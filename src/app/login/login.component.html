@@ -23,8 +23,9 @@
 			</div>
 			<!-- verzenden van het formulier is alleen mogelijk als de volledig is ingevuld -->
 			<div class="button--container">
-				<button type="submit" [disabled]='this.loginForm.invalid'><p>Login<p></button>
+				<button type="submit" [disabled]='this.loginForm.invalid'>Login</button>
 			</div>
 		</form>
+		<a [routerLink]="['/login-update']">ga naar compleet login scherm</a>
 	</div>
 </div>
