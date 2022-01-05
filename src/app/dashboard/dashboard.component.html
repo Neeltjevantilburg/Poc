@@ -1,1 +1,42 @@
-<p>dashboard works!</p>
+<div class="dashboard--container">
+    <div class="row">
+        <div class="col-4">
+            <!-- (click) hiermee wordt de functie clickMe gebonden aan de div -->
+            <div class="tile click" (click)="clickMe('panel 1')">
+                <div class="header">
+                    <p>panel 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="tile">
+                <div class="header">
+                    <p>panel 2</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="tile">
+                <div class="header">
+                    <p>panel 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <div class="tile">
+                <div class="header">
+                    <p>panel 4</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="tile">
+                <div class="header">
+                    <p>panel 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
