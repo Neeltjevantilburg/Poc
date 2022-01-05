@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="login--container">
+	<div class="login--content">
+		<div>
+			<p class="login--title">Login</p>
+			<p class="login--subtitle">Welkom bij mijn POC! Log hier in</p>
+		</div>
+		<!-- loginForm property koppelen aan <form> -->
+		<form [formGroup]='loginForm' (ngSubmit)="login()">
+			<p class="mb-1">Gebruikersnaam:</p>
+			<div class="suffix--container">
+				<!-- gebruikersnaam veld -->
+				<input placeholder="Gebruikersnaam" formControlName='userName'/>
+				<mat-icon>person_outline</mat-icon>
+			</div>
+			<p class="my-1">Wachtwoord:</p>
+			<div class="suffix--container">
+				<!-- wachtwoord veld -->
+				<!-- functionaileit wachtwoord tonen / verbergen -->
+				<input placeholder="Wachtwoord" [type]="hide ? 'password' : 'text'" formControlName='password' />
+				<!-- functionaileit icon wisselen -->
+				<mat-icon class="toggle" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+				<!-- de (click) zorgt ervoor dat de hide property toggled tussen true en false -->
+			</div>
+			<!-- verzenden van het formulier is alleen mogelijk als de volledig is ingevuld -->
+			<div class="button--container">
+				<button type="submit" [disabled]='this.loginForm.invalid'><p>Login<p></button>
+			</div>
+		</form>
+	</div>
+</div>
